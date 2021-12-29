@@ -1,1 +1,1 @@
-"# Cryptic" 
+# Cryptic

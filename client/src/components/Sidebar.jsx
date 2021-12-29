@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Sidebar() {
+const Sidebar = () => {
     return (
         <div className='sidebar'>
             <span>Web 3.0</span>

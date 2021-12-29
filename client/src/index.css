@@ -9,12 +9,18 @@
 }
 
 body {
+  height: 100vh;
   background-image: url('./assets/background.png');
   background-repeat: no-repeat;
+  overflow-x: hidden;
   height: 100vh;
-  overflow-y: hidden;
-  background-position: center;
-  background-size: cover;
+  /* background-position: center; */
+  /* background-size: cover; */
+  background-attachment: fixed !important;
+}
+
+.start {
+  height: 100vh;
 }
 
 .header {
@@ -23,6 +29,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+h1 {
+  font-weight: 700 !important;
+  letter-spacing: -1px;
 }
 
 .header h1 {
@@ -61,4 +72,245 @@ body {
   font-weight: 200;
   opacity: 0.3;
   margin: 0px 40px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 10vw;
+  padding-top: 4%;
+}
+
+.welcome {
+  margin-right: 100px;
+}
+
+.welcome h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.card {
+  width: 420px;
+  height: 230px;
+  padding: 20px !important;
+  background: #000000;
+  box-shadow: 0px 0px 25px 7px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  letter-spacing: -1px;
+  background-image: url('./assets/card.jpg');
+  background-size: 460px 290px;
+  position: relative;
+}
+
+.card-number {
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+.card-holder {
+  margin-top: 145px;
+}
+
+.card img {
+  position: absolute;
+  width: 30px;
+  top: 10px;
+  left: 20px;
+}
+
+.glass-cover {
+  width: 420px;
+  height: 230px;
+  background-color: rgba(0, 0, 0, 0.707);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 15px;
+}
+
+.abs-btn {
+  position: absolute;
+  z-index: 3;
+  left: 37%;
+  top: 44%;
+}
+
+.transactions {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 30px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.transactions button {
+  margin-left: 118px;
+  margin-top: 10px;
+}
+
+.input-group {
+  height: fit-content;
+  margin: 15px 0px;
+  letter-spacing: -1px;
+  width: 340px;
+} 
+
+.input-group input {
+  background-color: #31313182;
+  border: none;
+  width: 100%;
+  height: 35px;
+  margin-top: 8px;
+  border-radius: 6px;
+  text-indent: 10px;
+  transition: .15s;
+  color: white !important;
+}
+
+.input-group input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.353);
+  transition: .15s;
+}
+
+button {
+  background: #1866FF;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: .15s;
+}
+
+button:hover {
+  opacity: .6;
+  transition: .15s;
+}
+
+.loader img {
+  height: 21px;
+  margin-top: 2px;
+}
+
+.about h1 {
+  font-size: 40px;
+}
+
+.about .g-card {
+  background: rgba(0, 0, 0, 0.300);
+  width: fit-content;
+  border: 1px solid #3D3D3D;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 28px 11px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  padding: 10px;
+  display: flex;
+  align-self: center;
+  padding-right: 30px;
+}
+
+.g-card img {
+  width: 60px;
+  height: 60px;
+  margin: auto 6px;
+}
+
+.g-card .g-card-tent {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.g-card-tent h3 {
+  letter-spacing: -1px !important;
+}
+
+.g-card-tent p {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.trans-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+  background-color: rgba(0, 0, 0, 0.401);
+  border: 1px solid #3D3D3D;
+  width: 330px;
+  height: fit-content;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 28px 11px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0px 40px;
+  
+}
+
+.transactions-section h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin-bottom: 50px;
+}
+
+.trans-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  /* column-gap: 5%; */
+  row-gap: 5%;
+}
+.trans-card a, p {
+  text-decoration: none;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.trans-card img {
+  object-fit: cover;
+  width: 310px;
+  height: 200px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.trans-card span {
+  color: rgb(84, 84, 84);
+  text-align: center;
+  margin: 15px auto;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.transactions-section {
+  margin-bottom: 100px;
+}
+
+.footer {
+  width: 100%;
+  padding: 30px;
+  background-color: rgba(39, 39, 39, 0.381);
+  text-align: center;
+}
+
+.footer span {
+  font-family: 'Poppins', sans-serif !important;
+  opacity: 0.5;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 15px 0px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
